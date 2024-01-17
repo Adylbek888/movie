@@ -1,6 +1,11 @@
-requests==2.31.00
-channels==4.0.0
-Django==4.2.6
-ffmpeg==1.4
-ffmpeg-python==0.2.0
-urllib3==2.1.0
+This project is populated so that we can broadcast our videos on websites. in the future we will add new functions and optimize.
+To use this project you need to install the following libraries as Django, ffmpeg, ffmpeg-python, channels, urllib3.
+
+
+Command to run the project:
+python manage.py runserver
+
+
+Command to add user:
+python manage.py createsuperuser
+
