@@ -1,0 +1,6 @@
+requests==2.31.00
+channels==4.0.0
+Django==4.2.6
+ffmpeg==1.4
+ffmpeg-python==0.2.0
+urllib3==2.1.0
