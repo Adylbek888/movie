@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streaming</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <style>
+        #video {
+            width: 70%;
+            height: auto;
+        }
+        body {
+            background-color: #F5EEE6;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" controls></video>
+<script>
+    if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('{{ hls_url }}');
+        hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = '{{ hls_url }}';
+    }
+</script>
+
+</body>
+</html>

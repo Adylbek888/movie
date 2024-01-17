@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 127.0.0.1:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: 'mydatabase'
+      POSTGRES_USER: 'myuser'
+      POSTGRES_PASSWORD: 'mypassword'  
